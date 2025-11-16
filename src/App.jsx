@@ -1,26 +1,25 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Menu from './components/Menu'
+import Gallery from './components/Gallery'
+import Visit from './components/Visit'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-slate-950">
+      <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_50%_0%,rgba(99,102,241,0.15)_0%,rgba(15,23,42,0)_70%)]" />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Menu />
+        <Gallery />
+        <Visit />
+      </main>
+      <footer className="relative border-t border-white/10 py-8 text-center text-white/70 bg-slate-950">
+        <p>© {new Date().getFullYear()} Cafe Bealma. All rights reserved.</p>
+      </footer>
     </div>
   )
 }
